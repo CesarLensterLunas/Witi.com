@@ -35,6 +35,11 @@ Route::group(['middleware'=>'admin'], function(){
     Route::get('admin/admin/list', [AdminController::class, 'list']);
     Route::get('admin/admin/add', [AdminController::class, 'add']);
     Route::post('admin/admin/add', [AdminController::class, 'insert']);
+    Route::get('admin/admin/edit/{id}', [AdminController::class, 'edit']);
+    Route::post('admin/admin/update/{id}', [AdminController::class, 'update']);
+    Route::get('admin/admin/delete/{id}', [AdminController::class, 'Delete']);
+ 
+
 });
 
 Route::group(['middleware'=>'teacher'], function(){
